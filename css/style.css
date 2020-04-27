@@ -821,17 +821,17 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 
 .probootstrap-footer {
   padding: 3em 0 3em 0;
-  background: #C2331A;
+  background: #8B0000;
   position: relative;
   color: white;
 }
 
 .probootstrap-footer a {
-  color: #ff7676 !important;
+  color: #000000 !important;
 }
 
 .probootstrap-footer a:hover {
-  color: #ffffff !important;
+  color: red !important;
 }
 
 @media screen and (max-width: 768px) {
