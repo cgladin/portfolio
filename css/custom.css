@@ -14,6 +14,14 @@
 html, body{
    height: 100%;
 }
-.test {
+.ancre{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
    min-height: 100%
+}
+.nomprenom{
+   margin-top: 220px;
+   margin-left: 50px;
+   padding-right: 0px;
 }
