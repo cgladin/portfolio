@@ -1,10 +1,4 @@
-/*!==============================
- * Theme Name: Format
- * Theme URL: https://probootstrap.com/format-free-website-template-using-bootstrap-for-portfolio
- * Author: ProBootstrap.com
- * Author URL: https://probootstrap.com
- * License: Released for free under the Creative Commons Attribution 3.0 license (probootstrap.com/license)
- */
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?1z9v6x");
@@ -827,9 +821,9 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 
 .probootstrap-footer {
   padding: 3em 0 3em 0;
-  background: #000000;
+  background: #C2331A;
   position: relative;
-  color: rgba(255, 255, 255, 0.4);
+  color: white;
 }
 
 .probootstrap-footer a {
