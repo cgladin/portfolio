@@ -1,1 +1,4 @@
 /* Your custom css code goes here */
+.rounded{
+   border-radius: 50%;
+}
