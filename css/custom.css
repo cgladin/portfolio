@@ -1,4 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap');
 /* Your custom css code goes here */
 .rounded{
    border-radius: 50%;
+}
+.Degrade {
+   background-image:linear-gradient(to bottom, #500000, #8B0000);
+}
+.DegradeFooter {
+   background-image:linear-gradient(to top, #640000, #8B0000);
+}
+
+html, body{
+   height: 100%;
+}
+.test {
+   min-height: 100%
 }
