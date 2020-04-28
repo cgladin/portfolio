@@ -30,6 +30,9 @@
    }
 }
 @media screen and (min-width: 992px) {
+   .parcours{
+      border-left: solid 3px black;
+   }
    /* css card project */
    .project {
       width: 50%;
@@ -136,6 +139,31 @@
    }
    /* fin css card project */
 }
+@media screen and (max-width: 768px) {
+   .imageProfile{
+      height: 150px;
+      width: auto;
+      margin-left: 30%;
+      margin-bottom: 10px;
+   }
+   .probootstrap-scroll-down{
+      font-size:36px;
+   }
+   .probootstrap-intro .probootstrap-intro-text{
+      margin-top: 0px;
+      margin-left: 0px;
+      padding-right: 15px;
+   }
+   .project__image img{
+      display: none;
+   }
+   small a{
+      font-size: 15px;
+   }
+   .project__title a, small a{
+      color: black;
+   }
+}
 .rounded{
    border-radius: 50%;
 }
@@ -186,25 +214,6 @@ html, body{
 .zoomParcoursText:hover .diplome{
    color:red;
 }
-.parcours{
-   border-left: solid 3px black;
-}
 .imgParcours{
    margin: 1.414em 0 0.5em;
-}
-@media screen and (max-width: 768px) {
-   .imageProfile{
-      height: 150px;
-      width: auto;
-      margin-left: 30%;
-      margin-bottom: 10px;
-   }
-   .probootstrap-scroll-down{
-      font-size:36px;
-   }
-   .probootstrap-intro .probootstrap-intro-text{
-      margin-top: 0px;
-      margin-left: 0px;
-      padding-right: 15px;
-   }
 }
