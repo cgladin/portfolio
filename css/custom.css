@@ -28,12 +28,43 @@ html, body{
 #logogit{
    width: auto;
    height: 50px;
+   -webkit-transition: all 0.5s ease;
+   transition: all 0.5s ease;
+}
+#logogit:hover{
+   -webkit-transform: rotate(-40deg);
+   transform: rotate(-40deg);
 }
 #anchorGit{
    display: flex;
    justify-content: center;
 }
-
+.textqsj{
+   -webkit-transform: scale(1);
+   transform: scale(1);
+   -webkit-transition: .3s ease-in-out;
+   transition: .3s ease-in-out;
+}
+.textqsj:hover{
+   -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+}
+.zoomParcours{
+   -webkit-transform: scale(1);
+   transform: scale(1);
+   -webkit-transition: .3s ease-in-out;
+   transition: .3s ease-in-out;
+}
+.zoomParcours:hover{
+   -webkit-transform: scale(1.2);
+   transform: scale(1.2);
+}
+.zoomParcours:hover .diplome{
+  color:red;
+}
+.parcours{
+   border-left: solid 3px black;
+}
 /* css card project */
 .project {
    width: 50%;

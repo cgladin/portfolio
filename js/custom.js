@@ -9,6 +9,7 @@ $(document).ready(function(){
 		sensitivity: 20,
 	});
 });
+
 (function($){
 
 	$.fn.hover3d = function(options){
