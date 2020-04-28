@@ -1,6 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap');
-/* Your custom css code goes here */
+
+@media screen and (min-width: 768px) {
+   #logogit:hover{
+      -webkit-transform: rotate(-40deg);
+      transform: rotate(-40deg);
+   }
+   .zoomParcours:hover{
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+   }
+   .ParcoursText:hover{
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+   }
+}
+@media screen and (min-width: 992px) {
+   /* css card project */
+   .project {
+      width: 50%;
+      padding: 15px;
+   }
+   .project-list{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .project-list:after {
+      content: " ";
+      display: block;
+      clear: both;
+   }
+   .project__image {
+      display: block;
+      position: relative;
+   }
+   .project__image img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+   }
+   .project__image:after {
+      content: " ";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4));
+      transition: opacity 0.3s ease;
+      opacity: 0;
+   }
+   .project__card {
+      position: relative;
+      transition: box-shadow 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0);
+   }
+   .project__card.hover-in {
+      transition: transform 0.2s ease-out;
+   }
+   .project__card.hover-out {
+      transition: transform 0.2s ease-in;
+   }
+   .project:hover .project__card {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+   }
+   .project:hover .project__image:after {
+      opacity: 1;
+   }
+   .project:hover .project__detail {
+      border-width: 10px;
+      background: black;
+      opacity:0.8;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+   }
+   .project:hover .project__title, .project:hover .project__category {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+   }
+   .project:hover .project__title {
+      font-weight: 600;
+      margin-bottom: 0;
+      line-height: 1;
+   }
+   .project__detail {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      top: 30px;
+      bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      transform: translateZ(30px);
+      border: 0 solid #9b0202;
+      transition: border 0.4s ease;
+   }
+   .project__title {
+      margin: 0 0 10px;
+      font-size: 36px;
+      font-weight: 700;
+      transition: 0.4s ease;
+      opacity: 0;
+      transform: translateY(40px) scale(0);
+      will-change: transform;
+   }
+   .project__title a {
+      color: white;
+   }
+   .project__category {
+      opacity: 0;
+      transition: 0.4s ease;
+      transition-delay: 0.1s;
+      transform: translateY(40px) scale(0);
+      will-change: transform;
+   }
+   .project__category a {
+      color: rgba(255, 255, 255, .8);
+      font-size: 1.3em;
+   }
+   /* fin css card project */
+}
 .rounded{
    border-radius: 50%;
 }
@@ -31,23 +152,9 @@ html, body{
    -webkit-transition: all 0.5s ease;
    transition: all 0.5s ease;
 }
-#logogit:hover{
-   -webkit-transform: rotate(-40deg);
-   transform: rotate(-40deg);
-}
 #anchorGit{
    display: flex;
    justify-content: center;
-}
-.textqsj{
-   -webkit-transform: scale(1);
-   transform: scale(1);
-   -webkit-transition: .3s ease-in-out;
-   transition: .3s ease-in-out;
-}
-.textqsj:hover{
-   -webkit-transform: scale(1.1);
-   transform: scale(1.1);
 }
 .zoomParcours{
    -webkit-transform: scale(1);
@@ -55,118 +162,35 @@ html, body{
    -webkit-transition: .3s ease-in-out;
    transition: .3s ease-in-out;
 }
-.zoomParcours:hover{
-   -webkit-transform: scale(1.2);
-   transform: scale(1.2);
+.zoomParcoursText{
+   -webkit-transform: scale(1);
+   transform: scale(1);
+   -webkit-transition: .3s ease-in-out;
+   transition: .3s ease-in-out;
 }
-.zoomParcours:hover .diplome{
-  color:red;
+
+.zoomParcoursText:hover .diplome{
+   color:red;
 }
 .parcours{
    border-left: solid 3px black;
 }
-/* css card project */
-.project {
-   width: 50%;
-   padding: 15px;
+.imgParcours{
+   margin: 1.414em 0 0.5em;
 }
-.project-list{
-   display: flex;
-   flex-wrap: wrap;
+@media screen and (max-width: 768px) {
+   .imageProfile{
+      height: 150px;
+      width: auto;
+      margin-left: 30%;
+      margin-bottom: 10px;
+   }
+   .probootstrap-scroll-down{
+      font-size:36px;
+   }
+   .probootstrap-intro .probootstrap-intro-text{
+      margin-top: 0px;
+      margin-left: 0px;
+      padding-right: 15px;
+   }
 }
-.project-list:after {
-   content: " ";
-   display: block;
-   clear: both;
-}
-.project__image {
-   display: block;
-   position: relative;
-}
-.project__image img {
-   width: 100%;
-   max-width: 100%;
-   height: auto;
-   display: block;
-}
-.project__image:after {
-   content: " ";
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   left: 0;
-   top: 0;
-   background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4));
-   transition: opacity 0.3s ease;
-   opacity: 0;
-}
-.project__card {
-   position: relative;
-   transition: box-shadow 0.3s ease;
-   box-shadow: 0 10px 30px rgba(0, 0, 0, 0);
-}
-.project__card.hover-in {
-   transition: transform 0.2s ease-out;
-}
-.project__card.hover-out {
-   transition: transform 0.2s ease-in;
-}
-.project:hover .project__card {
-   box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
-}
-.project:hover .project__image:after {
-   opacity: 1;
-}
-.project:hover .project__detail {
-   border-width: 10px;
-   background: black;
-   opacity:0.8;
-   box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
-}
-.project:hover .project__title, .project:hover .project__category {
-   transform: translateY(0) scale(1);
-   opacity: 1;
-}
-.project:hover .project__title {
-   font-weight: 600;
-   margin-bottom: 0;
-   line-height: 1;
-}
-.project__detail {
-   position: absolute;
-   left: 30px;
-   right: 30px;
-   top: 30px;
-   bottom: 30px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   text-align: center;
-   transform: translateZ(30px);
-   border: 0 solid #9b0202;
-   transition: border 0.4s ease;
-}
-.project__title {
-   margin: 0 0 10px;
-   font-size: 36px;
-   font-weight: 700;
-   transition: 0.4s ease;
-   opacity: 0;
-   transform: translateY(40px) scale(0);
-   will-change: transform;
-}
-.project__title a {
-   color: white;
-}
-.project__category {
-   opacity: 0;
-   transition: 0.4s ease;
-   transition-delay: 0.1s;
-   transform: translateY(40px) scale(0);
-   will-change: transform;
-}
-.project__category a {
-   color: rgba(255, 255, 255, .8);
-   font-size: 1.3em;
-}
-/* fin css card project */

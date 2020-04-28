@@ -355,16 +355,6 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   margin-left: 100px;
   padding-right: 0px;
 }
-
-@media screen and (max-width: 768px) {
-  .probootstrap-intro .probootstrap-intro-text {
-    height: inherit !important;
-    margin-top: 100px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .probootstrap-intro {
     height: inherit !important;
