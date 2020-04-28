@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/styles-merged.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/custom.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!--[if lt IE 9]>
   <script src="js/vendor/html5shiv.min.js"></script>
   <script src="js/vendor/respond.min.js"></script>
@@ -25,9 +26,9 @@
     <nav role="navigation" class="probootstrap-nav hidden-xs"><!-- menu mobile -->
       <ul class="probootstrap-main-nav">
         <li class="active"><a href="index.html">Accueil</a></li>
-        <li ><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li ><a class="js-next" href="#quisuisje">Qui Suis-je ?</a></li>
+        <li><a class="js-next" href="#realisation">Realisation</a></li>
+        <li><a class="js-next" href="">Contact</a></li>
       </ul>
       <ul class="probootstrap-header-social hidden-xs">
         <li><a href="https://www.linkedin.com/in/cl%C3%A9ment-gladin-90a3051a1/"><i class="icon-linkedin"></i></a></li>
@@ -53,16 +54,17 @@
       </div>
     </div>
   </div>
-  <span class="probootstrap-animate"><a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a></span>
+  <span class="probootstrap-animate"><a class="probootstrap-scroll-down js-next" href="#quisuisje">Suivant <i class="icon-chevron-down"></i></a></span>
 </section>
+
 <main>
-  <section id="next-section" class="probootstrap-section">
+  <section class="probootstrap-section" id="quisuisje">
     <div class="container">
       <div class="row">
         <div class="col-md-5">
           <h2 class="mt0">Qui suis-je ?</h2>
           <p>Je suis Clément Gladin, J'ai 20 ans et je suis actuellement en deuxième année du DUT Informatique à Limoges (87). Ayant grandi dans la campagne Aveyronnaise (12),
-            je me suis vite passionné pour l'informatique en touchant un peu à tout que ça soit hardware pc ou bien logiciel et réseau .
+            je me suis vite passionné pour l'informatique en touchant un peu à tout, que ça soit hardware pc ou bien logiciel et réseau.
             Je suis également passionné par la culture japonnaise (son histoire, pop culture ...) ainsi que les jeux vidéo compétitifs en équipe comme Rocket League ou bien Counter Strike où la stratégie et la communication sont indispensable.
           </p>
         </div>
@@ -89,28 +91,57 @@
       <!-- END row -->
     </div>
   </section>
+
   <section class="probootstrap-section">
+
+  </section>
+
+  <section class="probootstrap-section" id="realisation">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center mb50">
-          <h2 class="mt0">Our Services</h2>
-        </div>
+      <h2 class="mt0">Réalisations :</h2>
+      <div id="anchorGit">
+        <a href="https://github.com/cgladin" ><img src="img/Octicons-mark-github.svg" id="logogit" alt="logo github"></a>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-          <p><img src="img/img_6.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></p>
-          <h3 class="mt0 mb40"><a href="#" class="hover-reverse">Behind the word mountains</a></h3>
-          <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+
+      <div class="project-list">
+        <div class="project">
+          <div class="project__card">
+            <a href="" class="project__image"><img src="img/Gare_de_Limoges.png" width=600 height=400 alt="gare de limoges"></a>
+            <div class="project__detail">
+              <h2 class="project__title"><a href="https://github.com/cgladin/ProjetTuteure">Projet Tuteure</a></h2>
+              <small class="project__category"><a href="#project-list">Projet de création de site pour l'ARSL de Limoges (87)</a></small>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <p><img src="img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></p>
-          <h3 class="mt0 mb40"><a href="#" class="hover-reverse">Because there were thousands of bad Commas</a></h3>
-          <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+
+        <div class="project">
+          <div class="project__card">
+            <a href="" class="project__image"><img src="img/snake.png" width=600 height=400 alt="projet Snake"></a>
+            <div class="project__detail">
+              <h2 class="project__title"><a href="#">Projet Snake</a></h2>
+              <small class="project__category"><a href="#">Projet réalisé pour les journées portes ouvertes</a></small>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <p><img src="img/img_3.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></p>
-          <h3 class="mt0 mb40"><a href="#" class="hover-reverse">Wild Question Marks and devious Semikoli</a></h3>
-          <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+
+        <div class="project">
+          <div class="project__card">
+            <a href="" class="project__image"><img src="http://unsplash.it/600/400?image=119" width=600 height=400 alt=""></a>
+            <div class="project__detail">
+              <h2 class="project__title"><a href="#">Project Name</a></h2>
+              <small class="project__category"><a href="#">Photography</a></small>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project__card">
+            <a href="" class="project__image"><img src="http://unsplash.it/600/400?image=89" width=600 height=400 alt=""></a>
+            <div class="project__detail">
+              <h2 class="project__title"><a href="#">Project Name</a></h2>
+              <small class="project__category"><a href="#">Photography</a></small>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -121,8 +152,6 @@
 <footer class="probootstrap-footer DegradeFooter">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-      </div>
       <div class="col-md-6">
         <p class="mb0 probootstrap-back-to-top"><a href="#" class="js-backtotop">Back to top</a></p>
       </div>
