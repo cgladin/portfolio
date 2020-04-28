@@ -37,8 +37,11 @@ html, body{
 /* css card project */
 .project {
    width: 50%;
-   float: left;
    padding: 15px;
+}
+.project-list{
+   display: flex;
+   flex-wrap: wrap;
 }
 .project-list:after {
    content: " ";
@@ -85,6 +88,8 @@ html, body{
 }
 .project:hover .project__detail {
    border-width: 10px;
+   background: black;
+   opacity:0.8;
    box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
 }
 .project:hover .project__title, .project:hover .project__category {
@@ -107,7 +112,7 @@ html, body{
    justify-content: center;
    text-align: center;
    transform: translateZ(30px);
-   border: 0 solid #00bcd4;
+   border: 0 solid #9b0202;
    transition: border 0.4s ease;
 }
 .project__title {
