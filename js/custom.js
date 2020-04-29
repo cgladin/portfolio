@@ -1,4 +1,24 @@
 $(document).ready(function(){
+	let isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+		BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);
+		},
+		iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+		Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+		Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+		any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
+	};
 	$(".project").hover3d({
 		selector: ".project__card"
 	});
@@ -8,19 +28,23 @@ $(document).ready(function(){
 		shine: true,
 		sensitivity: 20,
 	});
-	let offsetTop = $("#competences").offset().top;
-	let offsetToprea = $("#realisation").offset().top;
-	$(window).scroll(function() {
-		let visible = false;
-		let height = $(window).height();
-		if ($(window).scrollTop() + height > offsetTop && visible === false) {
-			visible = true;
-			$('.skillbar').each(function () {
-				$(this).find('.skillbar-bar').animate({
-					width: $(this).attr('data-percent')
-				}, 2000);
-			});
-		}/*
+	if(isMobile.any()){
+		$('.skillbar').each(function () {
+			$(this).find('.skillbar-bar').css('width',$(this).attr('data-percent'))
+		});
+	}
+	if(!isMobile.any()){
+		let offsetTop = $("#competences").offset().top;
+		let offsetToprea = $("#realisation").offset().top;
+		$(window).scroll(function() {
+			let height = $(window).height();
+			if ($(window).scrollTop() + height > offsetTop ) {
+				$('.skillbar').each(function () {
+					$(this).find('.skillbar-bar').animate({
+						width: $(this).attr('data-percent')
+					}, 2000);
+				});
+			}/*
 		console.log($(window).scrollTop() + height > offsetToprea);
 		if($(window).scrollTop() + height > offsetToprea && visible === true){
 			$('.skillbar').each(function () {
@@ -29,7 +53,9 @@ $(document).ready(function(){
 				}, 1000);
 			});
 		} */
-	});
+		});
+	}
+
 
 
 });
