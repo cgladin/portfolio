@@ -58,13 +58,11 @@ $(document).ready(function(){
 				$('.skillbar').each(function () {
 					$(this).find('.skillbar-bar').animate({
 						width: '0%'
-					}, 1000);
+					}, 500);
 				});
 			}
 		});
 	}
-
-
 });
 
 (function($){

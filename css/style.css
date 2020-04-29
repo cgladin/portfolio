@@ -331,14 +331,10 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 }
 
 .probootstrap-intro .probootstrap-scroll-down {
-  position: absolute;
-  z-index: 1;
-  left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   -webkit-transition: .9s all ease-out;
   transition: .9s all ease-out;
-  bottom: 20px;
   color: #ffffff;
   opacity: 1;
   visibility: visible;
@@ -818,16 +814,18 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 }
 
 .probootstrap-footer a {
-  color: #000000 !important;
+  color: white !important;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .probootstrap-footer a:hover {
-  color: red !important;
+  color: black !important;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
   .probootstrap-footer {
-    padding: 3em 0;
+    padding: 1em 0;
   }
 }
 
@@ -842,12 +840,12 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 }
 
 .probootstrap-footer .probootstrap-back-to-top {
-  text-align: right;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
   .probootstrap-footer .probootstrap-back-to-top {
-    text-align: left;
+    text-align: center;
     margin-top: 30px;
   }
 }

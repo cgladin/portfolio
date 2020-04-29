@@ -30,6 +30,9 @@
    }
 }
 @media screen and (min-width: 992px) {
+   .probootstrap-scroll-down {
+      font-size:40px;
+   }
    .parcours{
       border-left: solid 3px black;
    }
@@ -140,11 +143,15 @@
    /* fin css card project */
 }
 @media screen and (max-width: 768px) {
+   .marginTOP{
+      margin-top:10em;
+   }
    .imageProfile{
       height: 200px;
       width: auto;
-      margin-left: 20%;
-      margin-bottom: 10px;
+   }
+   .img{
+      text-align: center;
    }
    .probootstrap-scroll-down{
       font-size:36px;
@@ -153,6 +160,7 @@
       margin-top: 0px;
       margin-left: 0px;
       padding-right: 15px;
+      text-align: center;
    }
    .project__image img{
       display: none;
@@ -164,6 +172,7 @@
       color: black;
    }
 }
+/* fin des media screen */
 .roundedImage{
    border-radius: 50%;
 }
