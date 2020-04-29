@@ -28,33 +28,42 @@ $(document).ready(function(){
 		shine: true,
 		sensitivity: 20,
 	});
+
 	if(isMobile.any()){
 		$('.skillbar').each(function () {
 			$(this).find('.skillbar-bar').css('width',$(this).attr('data-percent'))
 		});
 	}
 	if(!isMobile.any()){
-		let offsetTop = $("#competences").offset().top;
-		let offsetToprea = $("#realisation").offset().top;
+		let positionTopCompetence = $("#competences").offset().top;
+		let height = $(window).height();
+		let competenceHeight = $("#competences").height();
+		let positionBotCompetence =competenceHeight + positionTopCompetence;
+		let load = false;
+		let botWindow;
+		let topWindow;
 		$(window).scroll(function() {
-			let height = $(window).height();
-			if ($(window).scrollTop() + height > offsetTop ) {
+			topWindow =$(window).scrollTop();
+			botWindow = topWindow + height;
+			if (botWindow > positionTopCompetence && botWindow < positionBotCompetence && load === false || topWindow < positionBotCompetence && topWindow > positionTopCompetence &&  load === false ) {
+				load = true;
 				$('.skillbar').each(function () {
 					$(this).find('.skillbar-bar').animate({
 						width: $(this).attr('data-percent')
 					}, 2000);
 				});
-			}/*
-		console.log($(window).scrollTop() + height > offsetToprea);
-		if($(window).scrollTop() + height > offsetToprea && visible === true){
-			$('.skillbar').each(function () {
-				$(this).find('.skillbar-bar').animate({
-					width: '0%'
-				}, 1000);
-			});
-		} */
+			}
+			if (load === true && botWindow < positionTopCompetence || load === true && topWindow > positionBotCompetence){
+				load = false;
+				$('.skillbar').each(function () {
+					$(this).find('.skillbar-bar').animate({
+						width: '0%'
+					}, 1000);
+				});
+			}
 		});
 	}
+
 
 });
 
