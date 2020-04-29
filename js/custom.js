@@ -8,12 +8,34 @@ $(document).ready(function(){
 		shine: true,
 		sensitivity: 20,
 	});
+	let offsetTop = $("#competences").offset().top;
+	let offsetToprea = $("#realisation").offset().top;
+	$(window).scroll(function() {
+		let visible = false;
+		let height = $(window).height();
+		if ($(window).scrollTop() + height > offsetTop && visible === false) {
+			visible = true;
+			$('.skillbar').each(function () {
+				$(this).find('.skillbar-bar').animate({
+					width: $(this).attr('data-percent')
+				}, 2000);
+			});
+		}/*
+		console.log($(window).scrollTop() + height > offsetToprea);
+		if($(window).scrollTop() + height > offsetToprea && visible === true){
+			$('.skillbar').each(function () {
+				$(this).find('.skillbar-bar').animate({
+					width: '0%'
+				}, 1000);
+			});
+		} */
+	});
+
+
 });
 
 (function($){
-
 	$.fn.hover3d = function(options){
-
 		var settings = $.extend({
 			selector      : null,
 			perspective   : 1000,
@@ -24,15 +46,11 @@ $(document).ready(function(){
 			hoverOutClass : "hover-out",
 			hoverClass    : "hover-3d"
 		}, options);
-
 		return this.each(function(){
-
 			var $this = $(this),
 				$card = $this.find(settings.selector);
 			currentX = 0;
 			currentY = 0;
-
-
 			if( settings.shine ){
 				$card.append('<div class="shine"></div>');
 			}
@@ -85,11 +103,9 @@ $(document).ready(function(){
 					theta  = Math.atan2(dy, dx),
 					angle  = theta * 180 / Math.PI - 90;
 
-
 				if (angle < 0) {
 					angle  = angle + 360;
 				}
-
 
 				$card.css({
 					perspective    : settings.perspective+"px",

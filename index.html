@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="css/styles-merged.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   <!--[if lt IE 9]>
   <script src="js/vendor/html5shiv.min.js"></script>
   <script src="js/vendor/respond.min.js"></script>
@@ -54,7 +56,7 @@
       </div>
     </div>
   </div>
-    <span class="probootstrap-animate"><a class="probootstrap-scroll-down js-next" href="#quisuisje">Suivant <i class="icon-chevron-down"></i></a></span>
+  <span class="probootstrap-animate"><a class="probootstrap-scroll-down js-next" href="#quisuisje">Suivant <i class="icon-chevron-down"></i></a></span>
 </section>
 
 <main>
@@ -76,14 +78,14 @@
                 <h4>2020 / Limoges (87)</h4>
                 <p class="diplome">DUT - Informatique</p>
               </div>
-              <img src="img/iut_limoges.png" alt="IUT Limoges" class="col-md-8 img-responsive zoomParcours imgParcours">
+              <img src="img/iut_limoges.png" alt="IUT Limoges" class="col-md-8 img-responsive zoomParcours imgParcours image-popup" data-aos="fade-down-left" data-aos-duration="1000">
             </li>
-            <li class="row">
+            <li class="row" >
               <div class="col-md-4 zoomParcoursText">
                 <h4>2018 / Périgueux (24)</h4>
                 <p class="diplome">STI2D - Systèmes d'Information et Numérique</p>
               </div>
-              <img src="img/albert_claveille.png" alt="albert claveille" class="col-md-8 img-responsive zoomParcours imgParcours">
+              <img src="img/albert_claveille.png" alt="albert claveille" class="col-md-8 img-responsive zoomParcours imgParcours" data-aos="fade-down-left" data-aos-duration="1000">
             </li>
           </ul>
         </div>
@@ -94,7 +96,48 @@
 
   <section class="probootstrap-section" id="competences">
     <div class="container">
-    <h2 class="mt0">Compétences :</h2>
+      <h2 class="mt0">Compétences :</h2>
+      <div class="skillbar clearfix " data-percent="90%">
+        <div class="skillbar-title" style="background: #d35400;"><span>HTML5/CSS3</span></div>
+        <div class="skillbar-bar" style="background: #e67e22;"></div>
+        <div class="skill-bar-percent">90%</div>
+      </div> <!-- End Skill Bar -->
+
+      <div class="skillbar clearfix " data-percent="50%">
+        <div class="skillbar-title" style="background: #2980b9;"><span>JS</span></div>
+        <div class="skillbar-bar" style="background: #3498db;"></div>
+        <div class="skill-bar-percent">50%</div>
+      </div> <!-- End Skill Bar -->
+
+      <div class="skillbar clearfix " data-percent="75%">
+        <div class="skillbar-title" style="background: #2c3e50;"><span>NodeJS</span></div>
+        <div class="skillbar-bar" style="background: #2c3e50;"></div>
+        <div class="skill-bar-percent">75%</div>
+      </div> <!-- End Skill Bar -->
+
+      <div class="skillbar clearfix " data-percent="80%">
+        <div class="skillbar-title" style="background: #46465e;"><span>PHP</span></div>
+        <div class="skillbar-bar" style="background: #5a68a5;"></div>
+        <div class="skill-bar-percent">80%</div>
+      </div> <!-- End Skill Bar -->
+
+      <div class="skillbar clearfix " data-percent="75%">
+        <div class="skillbar-title" style="background: #333333;"><span>SQL</span></div>
+        <div class="skillbar-bar" style="background: #525252;"></div>
+        <div class="skill-bar-percent">75%</div>
+      </div> <!-- End Skill Bar -->
+
+      <div class="skillbar clearfix " data-percent="60%">
+        <div class="skillbar-title" style="background: #27ae60;"><span>JAVA</span></div>
+        <div class="skillbar-bar" style="background: #2ecc71;"></div>
+        <div class="skill-bar-percent">60%</div>
+      </div> <!-- End Skill Bar -->
+
+      <div class="skillbar clearfix " data-percent="60%">
+        <div class="skillbar-title" style="background: #124e8c;"><span>C/C++</span></div>
+        <div class="skillbar-bar" style="background: #4288d0;"></div>
+        <div class="skill-bar-percent">60%</div>
+      </div> <!-- End Skill Bar -->
     </div>
   </section>
 
@@ -106,7 +149,7 @@
       </div>
 
       <div class="project-list">
-        <div class="project ">
+        <div class="project " data-aos="flip-left" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
           <div class="project__card">
             <a href="" class="project__image"><img src="img/Gare_de_Limoges.png" width=600 height=400 alt="gare de limoges"></a>
             <div class="project__detail">
@@ -116,7 +159,7 @@
           </div>
         </div>
 
-        <div class="project">
+        <div class="project" data-aos="flip-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
           <div class="project__card">
             <a href="" class="project__image"><img src="img/snake.png" width=600 height=400 alt="projet Snake"></a>
             <div class="project__detail">
@@ -126,7 +169,7 @@
           </div>
         </div>
 
-        <div class="project">
+        <div class="project" data-aos="flip-left" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
           <div class="project__card">
             <a href="" class="project__image"><img src="img/nodejs.jpg" width=600 height=400 alt=""></a>
             <div class="project__detail">
@@ -136,7 +179,7 @@
           </div>
         </div>
 
-        <div class="project">
+        <div class="project" data-aos="flip-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
           <div class="project__card">
             <a href="" class="project__image"><img src="img/android-logo.jpg" width=600 height=400 alt=""></a>
             <div class="project__detail">
@@ -146,7 +189,7 @@
           </div>
         </div>
 
-        <div class="project">
+        <div class="project" data-aos="flip-left" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
           <div class="project__card">
             <a href="" class="project__image"><img src="img/logo-php.png" width=600 height=400 alt=""></a>
             <div class="project__detail">
@@ -175,6 +218,10 @@
 <script src="js/scripts.min.js"></script>
 <script src="js/main.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 
 </body>
